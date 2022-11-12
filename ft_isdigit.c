@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 12:43:35 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/12 12:07:57 by skhaliff         ###   ########.fr       */
+/*   Created: 2021/11/08 09:47:12 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/11/12 12:07:48 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
-# include <stdio.h>
-# include <pthread.h>
-# include <stdlib.h>
+#include"philo.h"
 
-typedef struct t_philo{
-	pthread_t		*philo;
-	pthread_mutex_t	*mutex;
-}t_philo;
-
-int	ft_atoi(const char *str);
-int	ft_isdigit(int c);
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
