@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_usleep.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 09:47:12 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 12:06:53 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/11/15 18:10:19 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/11/15 18:11:24 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"philo.h"
+#include "philo.h"
 
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
-}
+// void    ft_usleep(int i)
+// {
+//     while(i)
+// }

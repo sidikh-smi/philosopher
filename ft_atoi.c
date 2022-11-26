@@ -6,20 +6,20 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:51:29 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/12 12:02:13 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/11/25 22:03:18 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"philo.h"
 
-int	convert_num(const char *s, int isneg)
+long	convert_num(const char *s, int isneg)
 {
 	int					i;
-	unsigned long		nbr;
+	long long			nbr;
 
 	i = 0;
 	nbr = 0;
-	while (s[i] != '\0' && ft_isdigit(s[i]))
+	while (s[i] >= '0' && s[i] <= '9')
 	{
 		nbr = (nbr * 10) + (s[i++] - '0');
 		if (nbr > 9223372036854775807)
@@ -42,9 +42,14 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nbr = 0;
 	isneg = 0;
-	while (str[i] != '\0' && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+	if (str[0] == '\0')
+		ft_error("ERROR\n");
+	while (str[i] != '\0' && (str[i] == ' '
+			|| str[i] == '\t' || str[i] == '\n'))
 		i++;
+	if (str[i] <= 48 && str[i] >= 57)
+		ft_error("ERROR\n");
+	//printf("%c\n", str[i]);
 	if (str[i] == '-')
 	{
 		isneg = 1;
@@ -54,6 +59,8 @@ int	ft_atoi(const char *str)
 		i++;
 	nbr = convert_num(str + i, isneg);
 	if (isneg == 1)
-		return (-nbr);
+		nbr = -nbr;
+	if (nbr > INT_MAX || nbr < INT_MIN)
+		ft_error("ERROR\n");
 	return (nbr);
 }

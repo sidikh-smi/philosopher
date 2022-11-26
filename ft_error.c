@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 09:47:12 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 12:06:53 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/11/24 22:11:49 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/11/24 22:13:47 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"philo.h"
+#include "philo.h"
 
-int	ft_isdigit(int c)
+void	ft_error(char *s)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(2, &s[i], 1);
+		i++;
+	}
+	exit(1);
 }
