@@ -12,6 +12,13 @@
 
 #include"philo.h"
 
+static int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
 long	convert_num(const char *s, int isneg)
 {
 	int					i;
@@ -30,6 +37,8 @@ long	convert_num(const char *s, int isneg)
 				return (0);
 		}
 	}
+	if (s[i] != '\0' && !ft_isdigit(s[i]))
+		ft_error("character invalid");
 	return (nbr);
 }
 
@@ -47,9 +56,7 @@ int	ft_atoi(const char *str)
 	while (str[i] != '\0' && (str[i] == ' '
 			|| str[i] == '\t' || str[i] == '\n'))
 		i++;
-	if (str[i] <= 48 && str[i] >= 57)
-		ft_error("ERROR\n");
-	//printf("%c\n", str[i]);
+
 	if (str[i] == '-')
 	{
 		isneg = 1;
@@ -59,7 +66,7 @@ int	ft_atoi(const char *str)
 		i++;
 	nbr = convert_num(str + i, isneg);
 	if (isneg == 1)
-		nbr = -nbr;
+		ft_error("The Number should Be Positive!!!");
 	if (nbr > INT_MAX || nbr < INT_MIN)
 		ft_error("ERROR\n");
 	return (nbr);
