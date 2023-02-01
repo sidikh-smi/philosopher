@@ -75,8 +75,7 @@ int	main(int argc, char **argv)
 				return (0);
 			mutex(philo, data);
 			create_threads(philo, data);
-			//supervisor(philo, data);
-			if_death(philo);
+			death(philo);
 		}
 		else
 			ft_error("ERrOr");

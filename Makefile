@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = philo
-SRCS_PHILO = philo.c ft_atoi.c ft_error.c ft_print.c utils.c init.c
+SRCS_PHILO = philo.c ft_atoi.c ft_error.c utils1.c utils2.c init.c
 CC		= cc
 RM		= rm -f
 CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
