@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_philo.c                                       :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:26:04 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/12 17:29:37 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/02 23:49:06 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,7 @@ t_data	*init_data(char **argv)
 t_philo *init_philo(t_philo *philo, t_data *data)
 {
     int             i;
-    pthread_mutex_t *forks;
 
-    forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->nmbr_philo);
-    if (!forks)
-        ft_error("error");
     philo = (t_philo *)malloc(sizeof(t_philo) * data->nmbr_philo);
     i = 0;
     while (i < data->nmbr_philo)
@@ -43,10 +39,12 @@ t_philo *init_philo(t_philo *philo, t_data *data)
         philo[i].nmbr_eat = 0;
         philo[i].eat = 0;
         philo[i].data = data;
-        philo[i].start = gette_time();
-        philo[i].forks = forks;
-        philo[i].last_eat = gette_time();
-        i++;
-    }
-    return (philo);
+        philo[i].start = time_now();
+        philo[i].forks = philo->forks;
+        philo[i].last_eat = time_now();
+		pthread_mutex_init(&philo[i].data->check_eat, NULL);
+		pthread_mutex_init(&philo[i].data->eat, NULL);
+		i++;
+	}
+	return (philo);
 }

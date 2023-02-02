@@ -1,50 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   utils1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 18:00:41 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 22:16:29 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/02 23:54:24 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+long	time_now(void)
+{
+	long	ss;
+	t_time	ti;
+
+	gettimeofday(&ti, NULL);
+	ss = (ti.tv_sec * 1000) + (ti.tv_usec / 1000);
+	return (ss);
+}
+
 long	gette_time(void)
 {
 	long	ss;
-	t_time Ti;
-	gettimeofday(&Ti , NULL);
-	ss = (Ti.tv_sec * 1000) + (Ti.tv_usec / 1000);
-	return(ss);
+	t_time	ti;
+
+	gettimeofday(&ti, NULL);
+	ss = (ti.tv_sec * 1000000) + (ti.tv_usec);
+	return (ss);
 }
 
-void	ft_sleep(unsigned long us)
+void	ft_sleep(unsigned long time)
 {
 	unsigned long	begin;
 
 	begin = gette_time();
-	while (gette_time() - begin < us)
+	usleep(time - 20000);
+	while (gette_time() - begin < time)
 		;
 }
 
-void	mutex(t_philo *philo, t_data *data)
+int	mutex(t_philo *philo, t_data *data)
 {
 	int	i;
 
 	i = 0;
-	pthread_mutex_init(&data->printing, NULL);
-	pthread_mutex_init(&philo->data->check_eat, NULL);
-    pthread_mutex_init(&philo->data->eat, NULL);
-	while(i < data->nmbr_philo)
-		pthread_mutex_init(&philo->forks[i++], NULL);
+	printf("hellooooooooo\n");
+	philo->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->nmbr_philo);
+	if (!philo->forks)
+		ft_error("error");
+	while (i < data->nmbr_philo)
+	{
+		if (pthread_mutex_init(&philo->forks[i], NULL))
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
 void	ft_printing(char *s, t_philo *philo)
 {
 	pthread_mutex_lock(&philo->data->printing);
-	printf("%ld ms Philo NUM %d  %s\n", gette_time() - philo->start, philo->index, s);
+	printf("%ld ms Philo NUM %d  %s\n", time_now() - philo->start, 
+		philo->index, s);
 	pthread_mutex_unlock(&philo->data->printing);
 }

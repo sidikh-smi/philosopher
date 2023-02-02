@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:58:27 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 22:11:04 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 00:02:38 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,11 @@ void    create_threads(t_philo *philo, t_data *data)
     int i;
 
     i = 0;
+	pthread_mutex_init(&philo->data->printing, NULL);
     while (i < data->nmbr_philo)
     {
         pthread_create(&philo[i].ph, NULL, &routine, &philo[i]);
-        usleep(100);
+        usleep(60);
         i++;
     }
 }
@@ -69,11 +70,12 @@ int	main(int argc, char **argv)
 		{
 			data = init_data(argv);
 			if (!data)
-				return(0);
+				return (0);
 			philo = init_philo(philo, data);
 			if (!philo)
 				return (0);
-			mutex(philo, data);
+			if (!mutex(philo, data))
+				ft_error("ERROR");
 			create_threads(philo, data);
 			death(philo);
 		}

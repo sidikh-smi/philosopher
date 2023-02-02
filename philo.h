@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:43:35 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 22:16:16 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/02 23:51:01 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,17 @@ typedef struct s_philo{
 
 int		ft_atoi(const char *str);
 void	ft_error(char *s);
-void	ft_printing(char *s, t_philo *ph);
+void	ft_printing(char *s, t_philo *philo);
 int		check_arg(int argc, char **argv);
-void    eat(t_philo *philo);
-void    sleepng(t_philo *philo);
-void    create_threads(t_philo *philo, t_data *data);
+void	eat(t_philo *philo);
+void	sleepng(t_philo *philo);
+void	create_threads(t_philo *philo, t_data *data);
 t_data	*init_data(char **argv);
-t_philo *init_philo(t_philo *philo, t_data *data);
+t_philo	*init_philo(t_philo *philo, t_data *data);
 long	gette_time(void);
-void	mutex(t_philo *philo, t_data *data);
+int		mutex(t_philo *philo, t_data *data);
 void	death(t_philo *philo);
 void	ft_sleep(unsigned long us);
+long	time_now(void);
 
 #endif
