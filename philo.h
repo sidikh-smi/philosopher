@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:43:35 by skhaliff          #+#    #+#             */
-/*   Updated: 2023/02/03 10:09:31 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 12:04:33 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <limits.h>
 # include <sys/time.h>
 
-typedef struct timeval t_time;
+typedef struct timeval	t_time;
 
 typedef struct s_data{
 	int				nmbr_philo;
@@ -54,7 +54,7 @@ t_data	*init_data(char **argv);
 t_philo	*init_philo(t_data *data);
 long	gette_time(void);
 int		mutex(t_philo *philo, t_data *data);
-void	death(t_philo *philo);
+void	death(t_philo *philo, t_data *data);
 void	ft_sleep(unsigned int time);
 long	time_now(void);
 

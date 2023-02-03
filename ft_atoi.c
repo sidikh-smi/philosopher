@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:51:29 by skhaliff          #+#    #+#             */
-/*   Updated: 2023/02/03 09:07:44 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 11:40:51 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,10 @@ int	ft_atoi(const char *str)
 	nbr = 0;
 	isneg = 0;
 	if (str[0] == '\0')
-		return(-1);
+		return (-1);
 	while (str[i] != '\0' && (str[i] == ' '
 			|| str[i] == '\t' || str[i] == '\n'))
 		i++;
-
 	if (str[i] == '-')
 	{
 		isneg = 1;
@@ -66,8 +65,8 @@ int	ft_atoi(const char *str)
 		i++;
 	nbr = convert_num(str + i, isneg);
 	if (isneg == 1)
-		return(-1);
+		return (-1);
 	if (nbr > INT_MAX || nbr < INT_MIN)
-		return(-1);
+		return (-1);
 	return (nbr);
 }

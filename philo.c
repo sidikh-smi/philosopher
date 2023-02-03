@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:58:27 by skhaliff          #+#    #+#             */
-/*   Updated: 2023/02/03 10:03:27 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 12:04:13 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	check_arg(int argc, char **argv)
 	while (i < argc)
 	{
 		if (ft_atoi(argv[i]) == 0)
-			return(-1);
+			return (-1);
 		i++;
 	}
 	return (1);
@@ -79,11 +79,11 @@ int	main(int argc, char **argv)
 			if (!philo)
 				return (-1);
 			create_threads(philo, data);
-			death(philo);
+			death(philo, data);
 		}
 		else
-			return(-1);
+			return (-1);
 	}
 	else
-		return(-1);
+		return (-1);
 }

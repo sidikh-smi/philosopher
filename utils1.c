@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 18:00:41 by skhaliff          #+#    #+#             */
-/*   Updated: 2023/02/03 10:13:43 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 11:41:50 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ long	time_now(void)
 	t_time	ti;
 
 	gettimeofday(&ti, NULL);
-	return((ti.tv_sec * 1000) + (ti.tv_usec / 1000));
+	return ((ti.tv_sec * 1000) + (ti.tv_usec / 1000));
 }
 
 long	gette_time(void)
@@ -45,9 +45,10 @@ int	mutex(t_philo *philo, t_data *data)
 	int	i;
 
 	i = 0;
-	philo->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->nmbr_philo);
+	philo->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t)
+			* data->nmbr_philo);
 	if (!philo->forks)
-		return(-1);
+		return (-1);
 	while (i < data->nmbr_philo)
 	{
 		if (pthread_mutex_init(&philo->forks[i], NULL))
