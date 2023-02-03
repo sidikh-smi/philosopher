@@ -1,0 +1,185 @@
+0 ms Philo NUM 1  has taken a fork
+0 ms Philo NUM 1  has taken a fork
+0 ms Philo NUM 1  is eating
+2 ms Philo NUM 3  has taken a fork
+2 ms Philo NUM 3  has taken a fork
+2 ms Philo NUM 3  is eating
+3 ms Philo NUM 5  has taken a fork
+200 ms Philo NUM 1  is sleeping
+200 ms Philo NUM 5  has taken a fork
+200 ms Philo NUM 5  is eating
+200 ms Philo NUM 2  has taken a fork
+202 ms Philo NUM 3  is sleeping
+202 ms Philo NUM 2  has taken a fork
+202 ms Philo NUM 2  is eating
+202 ms Philo NUM 4  has taken a fork
+400 ms Philo NUM 1  is Thinking
+400 ms Philo NUM 5  is sleeping
+401 ms Philo NUM 4  has taken a fork
+401 ms Philo NUM 4  is eating
+401 ms Philo NUM 1  has taken a fork
+402 ms Philo NUM 3  is Thinking
+402 ms Philo NUM 2  is sleeping
+402 ms Philo NUM 3  has taken a fork
+402 ms Philo NUM 1  has taken a fork
+402 ms Philo NUM 1  is eating
+600 ms Philo NUM 5  is Thinking
+601 ms Philo NUM 4  is sleeping
+601 ms Philo NUM 3  has taken a fork
+601 ms Philo NUM 5  has taken a fork
+601 ms Philo NUM 3  is eating
+602 ms Philo NUM 2  is Thinking
+602 ms Philo NUM 1  is sleeping
+602 ms Philo NUM 5  has taken a fork
+602 ms Philo NUM 5  is eating
+602 ms Philo NUM 2  has taken a fork
+801 ms Philo NUM 4  is Thinking
+801 ms Philo NUM 3  is sleeping
+801 ms Philo NUM 2  has taken a fork
+801 ms Philo NUM 4  has taken a fork
+801 ms Philo NUM 2  is eating
+802 ms Philo NUM 1  is Thinking
+802 ms Philo NUM 5  is sleeping
+802 ms Philo NUM 4  has taken a fork
+802 ms Philo NUM 4  is eating
+802 ms Philo NUM 1  has taken a fork
+1001 ms Philo NUM 3  is Thinking
+1001 ms Philo NUM 3  has taken a fork
+1001 ms Philo NUM 1  has taken a fork
+1001 ms Philo NUM 1  is eating
+1001 ms Philo NUM 2  is sleeping
+1002 ms Philo NUM 5  is Thinking
+1002 ms Philo NUM 4  is sleeping
+1002 ms Philo NUM 3  has taken a fork
+1002 ms Philo NUM 5  has taken a fork
+1002 ms Philo NUM 3  is eating
+1201 ms Philo NUM 2  is Thinking
+1201 ms Philo NUM 1  is sleeping
+1201 ms Philo NUM 5  has taken a fork
+1201 ms Philo NUM 2  has taken a fork
+1201 ms Philo NUM 5  is eating
+1202 ms Philo NUM 4  is Thinking
+1202 ms Philo NUM 2  has taken a fork
+1202 ms Philo NUM 2  is eating
+1202 ms Philo NUM 4  has taken a fork
+1202 ms Philo NUM 3  is sleeping
+1401 ms Philo NUM 1  is Thinking
+1401 ms Philo NUM 5  is sleeping
+1401 ms Philo NUM 4  has taken a fork
+1401 ms Philo NUM 1  has taken a fork
+1401 ms Philo NUM 4  is eating
+1402 ms Philo NUM 2  is sleeping
+1402 ms Philo NUM 3  is Thinking
+1402 ms Philo NUM 1  has taken a fork
+1402 ms Philo NUM 3  has taken a fork
+1402 ms Philo NUM 1  is eating
+1601 ms Philo NUM 5  is Thinking
+1601 ms Philo NUM 4  is sleeping
+1601 ms Philo NUM 3  has taken a fork
+1602 ms Philo NUM 2  is Thinking
+1602 ms Philo NUM 3  is eating
+1602 ms Philo NUM 5  has taken a fork
+1602 ms Philo NUM 1  is sleeping
+1602 ms Philo NUM 5  has taken a fork
+1602 ms Philo NUM 5  is eating
+1602 ms Philo NUM 2  has taken a fork
+1801 ms Philo NUM 4  is Thinking
+1802 ms Philo NUM 3  is sleeping
+1802 ms Philo NUM 1  is Thinking
+1802 ms Philo NUM 5  is sleeping
+1802 ms Philo NUM 2  has taken a fork
+1802 ms Philo NUM 4  has taken a fork
+1802 ms Philo NUM 4  has taken a fork
+1802 ms Philo NUM 4  is eating
+1802 ms Philo NUM 1  has taken a fork
+1802 ms Philo NUM 2  is eating
+2002 ms Philo NUM 3  is Thinking
+2002 ms Philo NUM 5  is Thinking
+2002 ms Philo NUM 4  is sleeping
+2002 ms Philo NUM 2  is sleeping
+2002 ms Philo NUM 5  has taken a fork
+2002 ms Philo NUM 1  has taken a fork
+2002 ms Philo NUM 1  is eating
+2002 ms Philo NUM 3  has taken a fork
+2002 ms Philo NUM 3  has taken a fork
+2002 ms Philo NUM 3  is eating
+2202 ms Philo NUM 4  is Thinking
+2202 ms Philo NUM 2  is Thinking
+2202 ms Philo NUM 1  is sleeping
+2202 ms Philo NUM 5  has taken a fork
+2202 ms Philo NUM 5  is eating
+2202 ms Philo NUM 2  has taken a fork
+2202 ms Philo NUM 3  is sleeping
+2202 ms Philo NUM 2  has taken a fork
+2202 ms Philo NUM 2  is eating
+2202 ms Philo NUM 4  has taken a fork
+2402 ms Philo NUM 1  is Thinking
+2402 ms Philo NUM 5  is sleeping
+2402 ms Philo NUM 3  is Thinking
+2402 ms Philo NUM 4  has taken a fork
+2402 ms Philo NUM 4  is eating
+2402 ms Philo NUM 1  has taken a fork
+2402 ms Philo NUM 1  has taken a fork
+2402 ms Philo NUM 1  is eating
+2402 ms Philo NUM 2  is sleeping
+2402 ms Philo NUM 3  has taken a fork
+2602 ms Philo NUM 5  is Thinking
+2602 ms Philo NUM 4  is sleeping
+2602 ms Philo NUM 1  is sleeping
+2602 ms Philo NUM 3  has taken a fork
+2602 ms Philo NUM 2  is Thinking
+2602 ms Philo NUM 2  has taken a fork
+2602 ms Philo NUM 5  has taken a fork
+2602 ms Philo NUM 5  has taken a fork
+2602 ms Philo NUM 5  is eating
+2602 ms Philo NUM 3  is eating
+2802 ms Philo NUM 4  is Thinking
+2802 ms Philo NUM 1  is Thinking
+2802 ms Philo NUM 5  is sleeping
+2802 ms Philo NUM 3  is sleeping
+2802 ms Philo NUM 4  has taken a fork
+2802 ms Philo NUM 4  has taken a fork
+2802 ms Philo NUM 2  has taken a fork
+2802 ms Philo NUM 1  has taken a fork
+2802 ms Philo NUM 2  is eating
+2802 ms Philo NUM 4  is eating
+3002 ms Philo NUM 3  is Thinking
+3002 ms Philo NUM 5  is Thinking
+3002 ms Philo NUM 2  is sleeping
+3002 ms Philo NUM 1  has taken a fork
+3002 ms Philo NUM 3  has taken a fork
+3002 ms Philo NUM 1  is eating
+3002 ms Philo NUM 4  is sleeping
+3002 ms Philo NUM 3  has taken a fork
+3002 ms Philo NUM 3  is eating
+3002 ms Philo NUM 5  has taken a fork
+3202 ms Philo NUM 2  is Thinking
+3202 ms Philo NUM 1  is sleeping
+3203 ms Philo NUM 5  has taken a fork
+3204 ms Philo NUM 3  is sleeping
+3204 ms Philo NUM 4  is Thinking
+3206 ms Philo NUM 5  is eating
+3206 ms Philo NUM 2  has taken a fork
+3206 ms Philo NUM 2  has taken a fork
+3206 ms Philo NUM 2  is eating
+3206 ms Philo NUM 4  has taken a fork
+3402 ms Philo NUM 1  is Thinking
+3404 ms Philo NUM 3  is Thinking
+3406 ms Philo NUM 5  is sleeping
+3406 ms Philo NUM 4  has taken a fork
+3406 ms Philo NUM 4  is eating
+3406 ms Philo NUM 1  has taken a fork
+3406 ms Philo NUM 1  has taken a fork
+3406 ms Philo NUM 1  is eating
+3406 ms Philo NUM 3  has taken a fork
+3406 ms Philo NUM 2  is sleeping
+3606 ms Philo NUM 5  is Thinking
+3606 ms Philo NUM 4  is sleeping
+3606 ms Philo NUM 1  is sleeping
+3606 ms Philo NUM 3  has taken a fork
+3606 ms Philo NUM 2  is Thinking
+3606 ms Philo NUM 2  has taken a fork
+3606 ms Philo NUM 5  has taken a fork
+3606 ms Philo NUM 5  has taken a fork
+3806 ms Philo NUM 4  is Thinking
+3806 ms Philo NUM 1  is Thinking

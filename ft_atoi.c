@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:51:29 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/11/25 22:03:18 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 09:07:44 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ long	convert_num(const char *s, int isneg)
 		}
 	}
 	if (s[i] != '\0' && !ft_isdigit(s[i]))
-		ft_error("character invalid");
+		return (-1);
 	return (nbr);
 }
 
@@ -52,7 +52,7 @@ int	ft_atoi(const char *str)
 	nbr = 0;
 	isneg = 0;
 	if (str[0] == '\0')
-		ft_error("ERROR\n");
+		return(-1);
 	while (str[i] != '\0' && (str[i] == ' '
 			|| str[i] == '\t' || str[i] == '\n'))
 		i++;
@@ -66,8 +66,8 @@ int	ft_atoi(const char *str)
 		i++;
 	nbr = convert_num(str + i, isneg);
 	if (isneg == 1)
-		ft_error("The Number should Be Positive!!!");
+		return(-1);
 	if (nbr > INT_MAX || nbr < INT_MIN)
-		ft_error("ERROR\n");
+		return(-1);
 	return (nbr);
 }

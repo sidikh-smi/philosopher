@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:58:27 by skhaliff          #+#    #+#             */
-/*   Updated: 2023/02/03 00:02:38 by skhaliff         ###   ########.fr       */
+/*   Updated: 2023/02/03 10:03:27 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,42 +17,46 @@ int	check_arg(int argc, char **argv)
 	int	i;
 
 	i = 1;
-
 	while (i < argc)
 	{
 		if (ft_atoi(argv[i]) == 0)
-			ft_error("ERROR");
+			return(-1);
 		i++;
 	}
 	return (1);
 }
 
-void    *routine(void *arg)
+void	*routine(void *arg)
 {
-    t_philo	*philo;
+	t_philo	*philo;
 
 	philo = (t_philo *) arg;
-    while (1)
-    {
-        eat(philo);
-        sleepng(philo);
-        ft_printing("is Thinking", philo);
-    }
+	while (1)
+	{
+		eat(philo);
+		sleepng(philo);
+		ft_printing("is Thinking", philo);
+		pthread_mutex_lock(&philo->data->eat);
+		philo->eat = 0;
+		pthread_mutex_unlock(&philo->data->eat);
+	}
 }
 
-
-void    create_threads(t_philo *philo, t_data *data)
+void	create_threads(t_philo *philo, t_data *data)
 {
-    int i;
+	int	i;
 
-    i = 0;
-	pthread_mutex_init(&philo->data->printing, NULL);
-    while (i < data->nmbr_philo)
-    {
-        pthread_create(&philo[i].ph, NULL, &routine, &philo[i]);
-        usleep(60);
-        i++;
-    }
+	i = 0;
+	data->start = time_now();
+	pthread_mutex_init(&data->printing, NULL);
+	while (i < data->nmbr_philo)
+	{
+		philo[i].last_eat = time_now();
+		if (pthread_create(&philo[i].ph, NULL, &routine, &philo[i]))
+			return ;
+		usleep(100);
+		i++;
+	}
 }
 
 int	main(int argc, char **argv)
@@ -70,18 +74,16 @@ int	main(int argc, char **argv)
 		{
 			data = init_data(argv);
 			if (!data)
-				return (0);
-			philo = init_philo(philo, data);
+				return (-1);
+			philo = init_philo(data);
 			if (!philo)
-				return (0);
-			if (!mutex(philo, data))
-				ft_error("ERROR");
+				return (-1);
 			create_threads(philo, data);
 			death(philo);
 		}
 		else
-			ft_error("ERrOr");
+			return(-1);
 	}
 	else
-		ft_error("ARGUMENT!!!");
+		return(-1);
 }
